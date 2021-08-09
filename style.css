@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+.main{
+    height: 100vh;
+    width: 50vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sub{
+    margin: 0;
+    font-size: 2vh;
+}
+.mainChild{
+    background-color: white;
+    height: 95%;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    height: 3.5vh;
+}
+#soon{
+    font-weight: 300;
+    font-size: 6vh;
+}
+#input{
+    height: 5vh;
+    border: 1px solid lightgray;
+    border-radius: 3vh;
+    width: 45%;
+}
+#input:focus{
+    outline: none;
+}
+#red{
+    margin: 0;
+    font-size: 1.5vh;
+    text-align: start;
+    margin-right: 50%;
+    display: inline;
+    color: hsl(0, 100%, 74%);
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+}
+#btn{
+    height: 5vh;
+    font-size: 1em;
+    width: 25%;
+    background-color:  hsl(223, 87%, 63%);
+    color: white;
+    border-radius: 3vh;
+    border: none;
+    outline: none;
+}
+#btn:hover{
+    cursor: pointer;
+
+}
+#board{
+    width: 100%;
+    margin-top: 3%;
+    height: 50%;
+}
+.fa-facebook:hover{
+    background-color: red ;
+}
+.socials{
+    margin-top: 5%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+.wrong{
+    border: 1px solid red !important;
+}
+.circle{
+    margin-right: 2%;
+    width: 3%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    color:  hsl(223, 87%, 63%);
+}
+.circle:hover{
+    background-color:  hsl(223, 87%, 63%);
+    color: white;
+}
+@media screen and (max-width: 600px) {
+    
+    .main{
+        width: 90%;
+    }
+    #red{
+        margin-right: 20%;
+    }
+    .inputs{
+        display: flex;
+        justify-content: unset;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    #input{
+        width: 80%;
+    }
+    #btn{
+        width: 60%;
+    }
+}

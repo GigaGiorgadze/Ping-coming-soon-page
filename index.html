@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Ping coming soon page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="mainChild">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="">
+      </div>
+      <h1 id="soon">We are launching <strong>soon!</strong></h1>
+      <p id="sub">Subscribe and get notified</p>
+      <form action="">
+        <div class="inputs">
+          <input id="input" type="email">
+        <input id="btn" type="submit" value="Notify me">
+        </div>
+      </form>
+      <img id="board" src="./images/illustration-dashboard.png" alt="">
+      <div class="socials">
+        <div class="circle"><i class="fab fa-facebook-f"></i></div>
+        <div class="circle"><i class="fab fa-twitter"></i></div>
+        <div class="circle"><i class="fab fa-instagram"></i></div>
+      </div>
+      <p>  &copy; Copyright Ping. All rights reserved.</p>
+    </div>
+  </div>
+  <script>
+     const red = document.createElement('p')
+     const form = document.querySelector('form')
+     const btn = document.querySelector('#btn')
+     const inputs = document.querySelector('.inputs')
+    const input = document.querySelector('input')
+
+     red.id = 'red'
+    form.addEventListener('submit', (e) =>{
+      e.preventDefault()
+      if(input.value){
+
+      }else{
+        input.className = 'wrong'
+      inputs.after(red)
+      red.innerText = "Whoops! It looks like you forgot to add your email"
+      }
+    })
+    input.addEventListener('input', (e) =>{
+      if (input.validity.typeMismatch){
+      input.className = 'wrong'
+      inputs.after(red)
+      red.innerText = "Please provide a valid email address"
+    }else{
+      red.remove()
+      input.className = ''
+    }
+    })
+  </script>
+</body>
+</html>
